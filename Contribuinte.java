@@ -10,15 +10,15 @@ public abstract class Contribuinte implements CalculadoraTributo{
     }
 
     public String getNome(){
-        return nome;
+        return this.nome;
     }
 
     public String getCpf(){
-        return cpf;
+        return this.cpf;
     }
 
     public double getSalarioBruto(){
-        return salarioBruto;
+        return this.salarioBruto;
     }
 
     public void setNome(String nome){
@@ -36,9 +36,9 @@ public abstract class Contribuinte implements CalculadoraTributo{
     public void exibirResumo(){
         System.out.println("Nome: "+ nome);
         System.out.println("CPF: "+ cpf);
-        System.out.println("Salário Bruto: "+ salarioBruto);
-        System.out.printf("INSS: R$"+ calcularINSS());
-        System.out.println("IRPF: R$"+ calcularIRPF());
-        System.out.println("Salário Líquido: R$"+ calcularSalarioLiquido());
+        System.out.printf("Salário Bruto: R$ %.2f%n", salarioBruto);
+        System.out.printf("INSS: R$ %.2f%n", calcularINSS());
+        System.out.printf("IRPF: R$ %.2f%n", calcularIRPF());
+        System.out.printf("Salário Líquido: R$ %.2f%n", calcularSalarioLiquido());
     }
 }
